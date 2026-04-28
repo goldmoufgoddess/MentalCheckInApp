@@ -28,6 +28,25 @@ function sendCheckIn(feeling) {
   else if (feeling === "extra") {
     message = "💗 She clicked: Extra love";
   }
+
+  else if (feeling === "sad") {
+  message = "😢 Feeling sad";
+  }
+  else if (feeling === "frustrated") {
+  message = "😡 Feeling frustrated";
+  }
+  else if (feeling === "lonely") {
+  message = "😞 Feeling lonely";
+  }
+  else if (feeling === "tired") {
+  message = "😴 Feeling tired";
+  }
+  else if (feeling === "anxious") {
+  message = "😰 Feeling anxious";
+  }
+  else if (feeling === "love") {
+  message = "💕 Needs love";
+  }
   else {
     message = feeling;
   }
@@ -44,51 +63,19 @@ function sendCheckIn(feeling) {
 }
 
 function choose(option) {
-    sendCheckIn(option);
-    const text = document.getElementById("text");
-    const buttons = document.getElementById("buttons");
+  sendCheckIn(option);
 
-    if (option === "school") {
-        document.body.className = "school-bg";
+  const text = document.getElementById("text");
+  const buttons = document.getElementById("buttons");
 
-        text.innerText =
-        "My Future Nurse... I know nursing school feels heavy right now, but pressure creates diamonds. You're becoming who you prayed to be.";
+  text.innerHTML = "I got you ❤️";
+  buttons.innerHTML = "";
 
-        buttons.innerHTML = `
-            <button onclick="sayMessage('proud')">Tell me you're proud of me</button>
-            <button onclick="sayMessage('why')">Remind me why I'm doing this</button>
-            <button onclick="sayMessage('break')">Help me calm down</button>
-            <button onclick="sayMessage('extra')">💗 Extra love</button>
-            <button onclick="restart()">Back</button>
-        `;
-    }
-
-    else if (option === "bad") {
-        document.body.className = "bad-bg";
-
-        text.innerText =
-        "Come here Love... rough days happen. You're still doing better than you think.";
-
-        buttons.innerHTML = `
-            <button onclick="sayMessage('comfort')">Comfort me</button>
-            <button onclick="sayMessage('laugh')">Make me smile</button>
-            <button onclick="restart()">Back</button>
-        `;
-    }
-
-    else if (option === "overstimulated") {
-        document.body.className = "overstimulated-bg";
-
-        text.innerText =
-        "Pause for a second Love. Breathe!";
-
-        buttons.innerHTML = `
-            <button onclick="sayMessage('breathe')">Breathe with me</button>
-            <button onclick="sayMessage('okay')">Tell me I'm okay</button>
-            <button onclick="restart()">Back</button>
-        `;
-    }
+  setTimeout(() => {
+    location.reload();
+  }, 5000);
 }
+
 
 function sayMessage(type) {
     sendCheckIn(type);
