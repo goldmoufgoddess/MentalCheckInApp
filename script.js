@@ -13,6 +13,21 @@ function sendCheckIn(feeling) {
   else if (feeling === "comfort") {
     message = "🤗 Just comfort me";
   } 
+  else if (feeling === "laugh") {
+    message = "😂 She clicked: Make me smile";
+  }
+  else if (feeling === "proud") {
+    message = "🥹 She clicked: Tell me you're proud of me";
+  }
+  else if (feeling === "why") {
+    message = "💭 She clicked: Remind me why I'm doing this";
+  }
+  else if (feeling === "break") {
+    message = "🧘 She clicked: Help me calm down";
+  }
+  else if (feeling === "extra") {
+    message = "💗 She clicked: Extra love";
+  }
   else {
     message = feeling;
   }
@@ -76,6 +91,7 @@ function choose(option) {
 }
 
 function sayMessage(type) {
+    sendCheckIn(type);
     const text = document.getElementById("text");
 
     if (type === "proud") {
