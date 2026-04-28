@@ -3,49 +3,33 @@ function sendCheckIn(feeling) {
 
   if (feeling === "school") {
     message = "📚 Nursing school is stressing me";
-  } 
+  }
   else if (feeling === "bad") {
     message = "😔 I had a rough day";
-  } 
+  }
   else if (feeling === "overstimulated") {
     message = "😵 I feel overstimulated";
-  } 
+  }
   else if (feeling === "comfort") {
     message = "🤗 Just comfort me";
-  } 
-  else if (feeling === "laugh") {
-    message = "😂 She clicked: Make me smile";
   }
-  else if (feeling === "proud") {
-    message = "🥹 She clicked: Tell me you're proud of me";
-  }
-  else if (feeling === "why") {
-    message = "💭 She clicked: Remind me why I'm doing this";
-  }
-  else if (feeling === "break") {
-    message = "🧘 She clicked: Help me calm down";
-  }
-  else if (feeling === "extra") {
-    message = "💗 She clicked: Extra love";
-  }
-
   else if (feeling === "sad") {
-  message = "😢 Feeling sad";
+    message = "😢 I feel sad";
   }
   else if (feeling === "frustrated") {
-  message = "😡 Feeling frustrated";
+    message = "😡 I feel frustrated";
   }
   else if (feeling === "lonely") {
-  message = "😞 Feeling lonely";
+    message = "😞 I feel lonely";
   }
   else if (feeling === "tired") {
-  message = "😴 Feeling tired";
+    message = "😴 I feel tired";
   }
   else if (feeling === "anxious") {
-  message = "😰 Feeling anxious";
+    message = "😰 I feel anxious";
   }
   else if (feeling === "love") {
-  message = "💕 Needs love";
+    message = "💕 Need love";
   }
   else {
     message = feeling;
