@@ -31,6 +31,9 @@ function sendCheckIn(feeling) {
   else if (feeling === "love") {
     message = "💕 Need love";
   }
+  else if (feeling === "emergency") {
+  message = "🚨 EMERGENCY: I need you now";
+  }
   else {
     message = feeling;
   }
